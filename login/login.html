@@ -19,11 +19,13 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/login/login.html">Login</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link" href="/products/product.html">All Products</a>
                   </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/login/login.html">Login</a>
+                  </li>
+                  
                   <li class="nav-item">
                     <a class="nav-link" href="/checkout/checkout.html">Cart</a>
                   </li>
@@ -33,36 +35,82 @@
           </nav>
     </header>
     <main>
-      <form class="form-horizontal alert alert-light" id="loginForm">
-        <div class="form-group">
-            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-            <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required aria-label="Email">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputPassword" class="col-sm-2 control-label">Password</label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password" required aria-label="Password">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" id="rememberMe"> Remember me
-                    </label>
+      <section class="h-100 gradient-form" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+              <div class="card rounded-3 text-black">
+                <div class="row g-0">
+                  <div class="col-lg-6">
+                    <div class="card-body p-md-5 mx-md-4">
+                      <form id="loginForm">
+                        <h3>Please login to your account</h3>
+                    
+                        <div class="form-group">
+                            <label for="inputEmail">Username</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                            <div class="invalid-feedback">Please enter a password.</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Remember me</label>
+                        </div>
+                    
+                        <div class="text-center pt-1 mb-5 pb-1">
+                            <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" onclick="validateForm()">Log in</button>
+                            <a class="text-muted" href="#">Forgot password?</a>
+                        </div>
+                    
+                        <div class="d-flex align-items-center justify-content-center pb-4">
+                            <p class="mb-0 me-2">Don't have an account?</p>
+                            <a class="btn btn-outline-danger" href="/registration/user-reg.html">Create new</a>
+                        </div>
+                    </form>
+                    
+                    <script>
+                      function validateForm() {
+                          var email = document.getElementById("inputEmail").value;
+                          var password = document.getElementById("inputPassword").value;
+                  
+                          if (email === "" || !email.includes("@") || !email.includes(".com" || ".org")) {
+                              showErrorMessage("inputEmail", "Please enter a valid email address.");
+                              return;
+                          }
+                  
+                          if (password === "" || password.length < 8) {
+                              showErrorMessage("inputPassword", "Please enter a password with at least 8 characters.");
+                              return;
+                          }
+                  
+                          // If all validation passes, submit the form
+                          document.getElementById("loginForm").submit();
+                      }
+                  
+                      function showErrorMessage(inputId, message) {
+                          var inputField = document.getElementById(inputId);
+                          var errorMessage = inputField.nextElementSibling;
+                  
+                          errorMessage.textContent = message;
+                          inputField.classList.add("is-invalid");
+                      }
+                  </script>
+                  
+                  
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">Sign in</button>
-                <a class="btn btn-default" href="/registration/user-reg.html">Register</a>
-            </div>
-        </div>
-    </form>
-    
+      </section>
     </main>
     <footer>
         <!-- Footer content: links, social media icons, contact information -->
