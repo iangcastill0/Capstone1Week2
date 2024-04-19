@@ -16,4 +16,4 @@ This website represents a mock website for a wheel company.
 ## Checkout
 <img src="/images/Cart.jpeg">
 
-One piece of this project i found most interesting would be the SCSS styling component that i used. I say this because i've never used a styling language other than CSS and SCSS makes you compile the code before you can view it in the browser.
+One piece of this project i found most interesting would be the SCSS styling component that i used. I say this because i've never used a styling language other than CSS, SCSS makes you compile the code before you can view it in the browser.
