@@ -1,4 +1,4 @@
-# Rims E-commerce site
+# E-commerce site
 This website represents a mock website for a wheel company.
 
 ## Home:
