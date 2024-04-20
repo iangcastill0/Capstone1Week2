@@ -16,4 +16,25 @@ label {
 
 body {
   background-color: #eee;
+}
+
+.navBarHome {
+  margin-left: 2%;
+  color: white !important;
+}
+
+.navBarContent {
+  margin-left: 38%;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.922) !important;
+}
+
+.my-3 {
+  margin-left: 2rem;
 }/*# sourceMappingURL=user-reg.css.map */

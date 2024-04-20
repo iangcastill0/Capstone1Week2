@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .carousel-control-next-icon {
   background-color: black;
   padding: 3rem 0rem;
@@ -18,4 +23,38 @@
 
 h1 {
   margin-left: 5vw;
+}
+
+.car {
+  float: right;
+  width: 24vw;
+  height: 22vh;
+  margin-top: -15rem;
+  border: solid 0.1rem rgba(0, 0, 0, 0.202);
+  border-radius: 3rem;
+}
+
+.bg-body-tertiary {
+  background-color: rgba(0, 0, 0, 0.922) !important;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.922) !important;
+}
+
+.py-5 {
+  color: white;
+}
+
+.navBarContent {
+  margin-left: 38%;
+}
+
+a {
+  color: white !important;
+}
+
+.navBarHome {
+  margin-left: 2%;
+  color: white;
 }/*# sourceMappingURL=index.css.map */

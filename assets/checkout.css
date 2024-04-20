@@ -5,4 +5,21 @@
 img {
   width: 3vw;
   height: 3vw;
+}
+
+.navBarHome {
+  margin-left: 2%;
+  color: white !important;
+}
+
+.navBarContent {
+  margin-left: 38%;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.922) !important;
+}
+
+.nav-link {
+  color: white !important;
 }/*# sourceMappingURL=checkout.css.map */
